@@ -1,0 +1,482 @@
+Python
+
+1. Giriş / Algoritma
+
+Algoritma kodlamayı, analizi kolaylaştırır.
+En uygun yol seçilir.
+
+Düz Metin
+Pseudo-Code (Kaba kod)
+Flow Charts (Akış Şemaları)
+
+-----------------------
+2. Bilgisayar ve Python
+
+Hardware (Donanım)
+Giriş-Çıkış birimleri
+CPU (Merkezi İşlem Birimi)
+
+Software (Yazılım)
+Program
+Programlama Dilleri
+Makine Dili
+Transistör (On-Off) (1 ve 0)
+ 
+Compiler (Derleyici) - (C, C++, C#)
+Tamamını çalıştırır ve tüm hataları gösterir
+
+Interpreter (Yorumlayıcı) - (Python, Java, PHP)
+Satır satır çalıştırır ve hataları anlık gösterir. Daha yavaştır.
+
+Source Code (Kaynak Kod)
+Editor (Kaynak Kodu Düzenleyici) - (IDLE, Spyder...)
+.exe (Çalıştırılabilir dosya) - (Executable)
+IDE
+
+Shell
+Save-Save as
+
+Syntax (Söz Dizimi)
+<- İnsan Dili -- Makine Dili ->
+<- Yüksek Seviyeli -- Düşük Seviyeli ->
+
+--------------------------
+3. Değişkenler (Variables)
+
+Değişken Adı = Değişken Değeri
+
+Kural 1 - Değişken adları ya "harf" ile ya "_" ile başlar.
+Kural 2 - Değişken adlarınde "_" hariç özel karakter kullanılmaz.
+Kural 3 - Değişken adı bir python komutu olamaz. (keyword.kwlist)
+Kural 4 - Türkçe karakter kullanma.
+Kural 5 - Büyük-Küçük karakter ayrımı vardır.
+
+Değişken değiştirme
+$ A, B = B, A
+
+Başlangıç Değeri
+
+Operatörler (+, -, *, /, %(MOD,kalan), **(üs alma), //(tam sayı bölme))
+
+İşlem Önceliği () > ** > * > / > % > +-
+
+$ A += 2
+
+Veri Tipleri
+int - 9
+float - 9.11
+bool - doğru yanlış
+str - abc
+
+$ type (3 == 3)
+
+# Açıklama Satırı
+
+-----------------
+4. Veri İşlemleri
+
+abc=int(input())
+
+$ print("a", "b", "c",sep=",")
+sep =("") #(seperate)(ayır)
+end =("") #satır devamı
+\n #alta yazdırma
+\t #boşluklu yazdırma
+\\ #taksim koyma
+
+-not ortalama uygulaması
+-yaş hesaplama uygulaması
+
+--------------------------------------
+5. Koşul ve Karşılaştırma Operatörleri
+
+if-elif-else
+
+True - False
+
+Boolean ops
+== #eşittir
+!= #eşit değildir
+>  #büyüktür
+<  #küçüktür
+>= #küçük eşittir
+<= #büyük eşittir
+
+Logical ops
+and - or - xor - not
+
+-not değerlendirme uygulaması (geçer-kalır)
+-kullanıcı adı şifre uygulaması
+
+-------------------
+6. Döngüler (Loop)
+
+for-while
+
+$ listA = ["ali","can","sully"]
+$ listB = [1,2,3]
+
+in / not in
+$ print("ali"  in listA) # True-False
+
+$ range(0,5) # 0dan 5'e kadar
+$ range(1,10,2) # 1den 10'a 2şer şekilde
+
+$ for i in range(0,5):
+	print(a)
+$ while True # sonsuz döngü
+# çıkmak için "break"
+# koşul ile es geçmek için "continue"
+
+İç içe döngü
+Örnek çarpım tablosu
+
+---------------
+7. Fonksiyonlar
+
+Düzen, anlaşılabilirlik, sürdürülebilirlik
+
+$ def topla():
+	print("...")
+
+default değer ayarlama
+
+#fonksiyon çıktısı
+$ def alan(A,B)
+	area = A*B
+	return(area)
+
+# Global ve Local değişkenler
+fonksiyonun içindeyse o bir lokal değişkendir.
+$ global a # olarak tanımlarsan global bir değişken olur.
+
+#içi boş fonksiyon için 
+$ pass
+
+#lambda - fonksiyon kısaltma
+$ def dolar(TL):
+	return(TL/18)
+$ dolar=lambda TL: TL/18
+
+#Recursive Function
+def ustel(a,b):
+	if b==0:
+		return 1
+	else:
+		return a*ustel(a,b-1)
+
+-------------------
+8. String İşlemleri
+
+Kelime ve cümlelerle işlemler
+
+$ type(a) #Tipini öğrenmek için örn: str
+
+index: 0,1,2,3...
+$ a[2] # 3.harf
+
+Python negatif indexlere izin verir.
+
+$ L=X+Y+Z # Birden fazla stringleri birleştirme
+
+$ S[3:] # String bölme örn: 3. ve sonrasını al
+$ S[1:5] # 1'den 5'e kadar 5 dahil değil
+$ S[1::2] # 1'den sonrası 2şer
+$ S[1:6:3] # 1'den 6'ya 3er 3er
+$ S[::-1] # Ters çevirme
+
+$ Adres = Adres.replace("eski","yeni") # kelime değiştirme
+
+$ for d in "deneme": # Stringin uzunluğu kadar çalışacak.
+	print(d)
+
+$ adres.split("_") # "_"nu referans alarak stringi böldü ve bir listeye dönüştürdü.
+
+$ len(cumle) # Uzunluk öğrenme
+$ cumle.count("a") # İçindeki a harfini say
+
+Karşılaştırma (True-False)
+$ "" == ""
+$ "" is "" 
+
+$ String = "A{}B"
+$ String.format(A)
+
+$ "".join(reversed(str1)) # Tırnak arasına harfler arasına ne koymak istiyorsanız.
+
+$ s.lower() # Küçük harf 
+$ s.upper() # Büyük harf
+$ s.swapcase() # Büyükleri Küçült, Küçükleri Büyült
+$ s.capitalize() # Baş harfi büyült
+
+$ "" in str # İçinde kelime aramak için
+
+Palindrom Uygulaması (Tersi ile düzü aynı olan kelimeler.)
+
+----------------------
+9. Diziler ve Listeler
+
+Array (Dizi) aynı türden oluşur.
+Listelerde böyle bir durum yok
+
+$ listA = ["",5,""]
+
+$ listA[2]
+$ listA.index[2] # 2 numarası kaçıncı indexte
+$ listA[2:] # vs vs
+
+$ listA.append() # sonuna ekler
+$ listA.insert(2,9) # hangi indexe ne ekliyeceksin
+
+$ len(listA)
+$ L.count()
+$ L1.extend(L2) # İki listeyi birleştirme
+$ L3 = L1 + L2
+
+$ L[::-1] # Listeyi ters çevirme
+$ L.reverse()
+
+$ min(L)
+$ max(L)
+
+$ L=list(str) # Stringi listeye dönüştürme
+
+$ L.remove("a") # İlk bulduğu a'yı sildi
+$ L.pop(2) # İndexe göre silme
+$ L.clear()
+
+$ 1 in L # True-False
+
+$ L.sort()
+
+Medyan(ortanca) uygulaması
+
+$ for i, value in enumerate() # Liste numaralandırma
+
+Stack (yığın) - Last in first out
+$ L.append() # Sona ekleme
+$ L.pop() # Default olarak sondan çıkarır
+
+Queue (kuyruk) - First in first out
+$ L.append()
+$ L.pop(0)
+
+Queue kullanarak hastahane sırası uygulaması
+
+--------------------------
+10. Sözlükler (Dictionary)
+
+$ Mevsim = {"kış":1,"ilkbahar":2,"yaz":3,"sonbahar":4} # Key,Değer sırasıyla
+$ TC = dict ([("ezel",1234),("can",1235),("efe",1236)])
+
+$ S.get("bir","yok") # Bulamazsa ikinci mesajı verir
+
+$ S.pop()
+$ S.keys()
+$ S.values()
+$ S.items()
+
+Küme (Set)
+$ K = {1,"","",3}
+$ K = set ("abc123")
+$ K1 | K2 # Birleşim
+$ K1 & K2 # Kesişim
+$ K1 - K2 # Çıkarım
+
+Demet (Tuple) (Tuple değiştirilemez sabittir.)
+$ T = (1,"","",4)
+
+-----------------------------------
+11. Nesne ve Sınıf (Object & Class)
+
+Class'ın altında tanımlanan fonksiyonlara method denir
+
+$ class a(): 
+	pass # Sınıfı oluşturduk ama henüz doldurmadığımız için pass
+
+$ At = hayvan() # Nesne oluşturma
+
+$ class Araba():
+	def __init__(self,model,marka,renk): #metotlar
+		self.model = model
+		self.marka = marka
+		self.renk = renk
+	def aracBilgisi(self):
+		print()
+		print()
+		print()
+
+$ Taksi = Araba(2020,"Fiat","Yeşil")
+$ Taksi.marka # markasını verir
+$ Taksi.model = 2020 # Güncelleme
+
+$ dir(Taksi) # metotlar ve özelliklere ulaşırsın
+$ type(Taksi) # Araba diye class'ı çıkar
+
+Inheritance (Kalıtım)
+Class'ın altına subclasslar oluşturmak.
+
+$ class araba:
+	def __init__(self,model,fiyat):
+		self.model=model
+		self.fiyat=fiyat
+	def arabaBilgi(self);
+		print(self.model,self.fiyat)
+		return(datetime.datetime.now()) # tarih kullanmak için import datetime
+
+$ class kamyon(araba)
+	def __init__(self,model,fiyat,renk):
+		araba.__init__(self,model,fiyat)
+		self.renk=renk
+
+Module (Modül) (.py)
+$ import math
+$ import random
+$ from modulename import * # içindeki tüm fonksiyonlara ulaşmak için
+$ from modulename import cevre # sadece 1 fonks ulaşmak
+$ import modulename as dik # kısa bir ad atamak için
+
+$ import math
+$ math.sqrt(100)
+
+$ __name__ == "__main__" # ana modülde miyim?
+
+----------------------------------
+12. Rastgele Sayı Üretimi (Random)
+
+$ import math 
+round
+min
+max
+pow
+bin
+hex
+chr
+sum
+
+$ math.sqrt(9) #Karekök
+$ math.gcd() #Ebob
+$ math.pi # Pi sayısı
+
+Örnek uygulama:Küre alan ve hacim hesabı
+
+$ import random 
+
+$ random.random() # 0 ile 1 arasında float değer
+$ random.randint(2,9) # iki sayı arasında random integer
+$ random.randrange(1,13,2) # 2şer olduğu için sadece tek sayıları döner
+$ random.uniform(10,11) # ikisi arasında float
+$ random.choice(listA) # içinden bir tane seçer
+$ random.shuffle(listA) # içindeki sıraları karıştırır.
+$ random.sample(listA,2) # liste içinden 2 eleman seç
+
+Random kullanarak örnek uygulamalar: Zar tahmin etme, taş kağıt makas oyunu, çarpım tablosu oyunu, adam asmaca oyunu
+
+--------------------
+13. Turtle ile Çizim
+
+$ import turtle
+
+Grafik Koordinat Sistemi (x,y)
+
+Pixel - subpixel
+
+$ turtle.pos() # position 
+$ turtle.goto()
+$ turtle.setpos()
+$ turtle.reset()
+$ turtle.home()
+$ turtle.setx()
+$ turtle.sety()
+
+Doğrusal çizim
+$ turtle.fd(100) #forward ileri gitme
+$ turtle.bk(50) #backward geri gitme
+$ turtle.rt(90) #right dön argüman olarak derece 
+$ turtle.lt(90) #left dön 
+
+Farklı turtle simgeleri
+$ turtle.getshapes()
+$ turtle.shape("turtle")
+$ turtle.hideturtle()
+$ turtle.showturtle()
+
+$ turtle.pensize()
+
+Renk komutları
+$ turtle.color("red","brown") # çizgi 1 iç dolgusu 2
+$ turtle.begin_fill()
+$ turtle.end_fill()
+
+Renk tablosu
+$ turtle.colormode(255)
+$ turtle.color(0,0,255)
+$ turtle.fillcolor(255,0,0)
+
+Daire
+$ turtle.circle(r) # yarıçap girilir
+$ turtle.puncolor("red")
+$ turtle.penup()
+$ turtle.goto(75,-80)
+$ turtle.pendown()
+
+Çokgen (poligon) çizimi
+$ n=int(input()) # kenar sayısını al
+$ aci = 360/N 
+$ for i in range(N):
+	turtle.forward(100)
+	turtle.left(aci)
+$ turtle.circle(100,360,5) # beşgen
+
+Veri girişi için iletişim kutusu
+input yerine numinput("poligon","kenar sayısı",5)
+renk inputu alırken textinput("renk","iç rengi")
+
+Çerçeve içine resim yerleştirme
+$ turtle.setup(512,512) # resim çerçevesi
+$ turtle.bypic("abc.gif")
+$ turtle.title("abc")
+
+Örnek uygulama: Türk Bayrağı çizimi
+
+---------------------------------
+14. Olay Tabanlı Projeler (Event)
+
+Tuşa basmak, tıklamak -- olay bazlı
+
+onclick() # mouse click
+onscreenclick()
+
+onrelease() # click bırakma
+
+ondrag() # fare haraketi
+
+listen() # tuş olaylarını yakalamak
+
+onkey(f,tuş)
+onkeyrelease(f,tuş) # tuş bırakıldığında fonks
+
+onkeypress(f,tuş) # tuşa basıldığında fonks 
+
+ontimer(f,t) # t ms sonra fonks
+
+mainloop() | done() # olay yakalama döngüsünü başlatma
+
+exitonclick() # cliclkte bye() fonks çağırır
+
+textinput("başlık","mesaj")
+numinput("başlık","mesaj")
+
+write() # ekrana mesaj yazar
+
+delay() # gecikme
+
+tracer(n,delay) # animasyon ayarı
+
+update() # çizim ekranını günceller, tracerdan sonra kullanılır
+
+distance()
+
+screen()
+
+Yılan Oyunu uygulaması
